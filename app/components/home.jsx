@@ -3,6 +3,14 @@ import {gsap} from "gsap"
 import {useRef } from 'react';
 import { useGSAP } from "@gsap/react";
 import Link from "next/link";
+import { Lato } from "next/font/google";
+import Lottie from "lottie-react";
+import facehome from "@/public/facehome.json"
+import ProductCard from "./card/productCard";
+const Font = Lato({
+    subsets:["latin"],
+    weight:["900","400"]
+})
 export default function HomePage(){
     const ref1 = useRef(null)
     const ref2 = useRef(null)
@@ -13,54 +21,57 @@ export default function HomePage(){
     const ref7 = useRef(null)
     const ref8 = useRef(null)
     const ref9 = useRef(null)
+    const ref10 = useRef(null)
     useGSAP(()=>{
         const tl = gsap.timeline()
         tl.from(ref1.current,{
-            y:-50,opacity:0,
-            duration:0.3
+            y:-10,opacity:0,
+            duration:0.15
         })
         tl.from(ref2.current,{
-            y:-50,opacity:0,
-            duration:0.3
+            y:-10,opacity:0,
+            duration:0.15
         })
         tl.from(ref3.current,{
-            y:-50,opacity:0,
-            duration:0.3
+            y:-10,opacity:0,
+            duration:0.15
         })
         tl.from(ref4.current,{
-            y:-50,opacity:0,
-            duration:0.3
+            y:-10,opacity:0,
+            duration:0.15
         })
         tl.from(ref5.current,{
-            y:-50,opacity:0,
-            duration:0.3
+            y:-10,opacity:0,
+            duration:0.15
         })
         tl.from(ref6.current,{
-            y:-50,opacity:0,
-            duration:0.3
+            y:-10,opacity:0,
+            duration:0.15
         })
         tl.from(ref7.current,{
             opacity:0,
-            scale:0,
             duration:0.3
         })
         tl.from(ref8.current,{
             opacity:0,
-            scale:0,
-            duration:0.3
+            duration:0.2
+        })
+        tl.from(ref10.current,{
+            opacity:0,
+            duration:0.2
         })
         tl.from(ref9.current,{
             opacity:0,
-            scale:0,
-            duration:0.5
-        })
+            duration:0.7
+        },"-=0.2")
+        
     },[])
     return<div className="h-[500vh] w-full bg-white">
-        <div className="h-20 w-full bg-black/5 shadow-sm fixed top-0 backdrop-blur-lg flex justify-between items-center px-5">
+        <div className="h-20 w-full  z-10 bg-orange-400/10 shadow-sm fixed top-0 backdrop-blur-sm flex justify-between items-center px-5">
         <div className="h-full flex justify-center  items-center">
         <img ref={ref1} src="https://digitalfortress.in/_next/static/media/logo.7fbc3c85.svg " className="h-2/3"></img>
         </div>
-        <div className="w-1/3 flex justify-between items-center ">
+        <div className="w-1/3 flex justify-between items-center font-medium ">
             <Link className="hover:underline hover:text-orange-500 " ref={ref2} href={"/#home"} >
                 Home
             </Link>
@@ -79,27 +90,48 @@ export default function HomePage(){
         </div>
         </div>
         <div id="home"  className="h-screen w-full  flex justify-around items-center pt-20 ">
-            <div className="w-2/3 h-full flex flex-col justify-center items-center pl-20">
-                <div ref={ref7} className=" w-full font-extrabold text-7xl flex justify-center items-end pb-2 ">
+            <div className="w-3/5 h-2/3 flex flex-col justify-around items-start pl-20">
+                <div ref={ref7} className={`${Font.className} w-full font-extrabold text-7xl flex justify-center items-end pb-2 `}>
                 Protect Your Digital World with Passwordless Authentication.
                 </div>
-                <p ref={ref8} className=" text-xl text-orange-500">DigitalFortress Private Limited offers a secure and convenient passwordless authentication solution to safeguard your online accounts and prevent cyber attacks. Say goodbye to the hassle of remembering passwords and protect your digital identity with ease.</p>
+                <p ref={ref8} className={` text-xl text-orange-500 ${Font.className}`}>DigitalFortress Private Limited offers a secure and convenient passwordless authentication solution to safeguard your online accounts and prevent cyber attacks. Say goodbye to the hassle of remembering passwords and protect your digital identity with ease.</p>
+                <button ref={ref10} className="flex justify-center items-center px-3 py-1 bg-orange-500 text-white rounded-lg text-xl">Contact us!</button>
             </div>
-            <div ref={ref9} className=" h-full w-1/3 flex justify-center items-center">
-                <img className="h-96 object-cover" src="https://plus.unsplash.com/premium_photo-1688045722767-8d8672f6950b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></img>
+            <div ref={ref9} className=" h-full w-2/5 flex justify-center items-center">
+            <Lottie animationData={facehome}></Lottie>
             </div>
         </div>
-        <div id="products" className="h-screen w-full flex justify-center items-center ">
-            products
+        <div id="products" className="h-screen w-full flex flex-col justify-center items-center bg-orange-200 ">
+            <p className="text-5xl font-bold pb-5">OUR PRODUCTS</p>
+            <div className="grid grid-cols-3 gap-5">
+            <ProductCard></ProductCard>
+            <ProductCard></ProductCard>
+            <ProductCard></ProductCard>
+            </div>
         </div>
-        <div id="services" className="h-screen w-full flex justify-center items-center ">
-            services
+        <div id="services" className="h-screen w-full flex flex-col justify-center items-center ">
+        <p className="text-5xl font-bold pb-5">SERVICES WE OFFER</p>
+            <div className="grid grid-cols-3 gap-5">
+            <ProductCard></ProductCard>
+            <ProductCard></ProductCard>
+            <ProductCard></ProductCard>
+            </div>
         </div>
-        <div id="testimonial" className="h-screen w-full flex justify-center items-center ">
-            testimonail
+        <div id="testimonial" className="h-screen w-full flex flex-col justify-center items-center bg-orange-200">
+        <p className="text-5xl font-bold pb-5">TESTIMONIALS</p>
+            <div className="grid grid-cols-3 gap-5">
+            <ProductCard></ProductCard>
+            <ProductCard></ProductCard>
+            <ProductCard></ProductCard>
+            </div>
         </div>
-        <div id="aboutus" className="h-screen w-full flex justify-center items-center ">
-            about us
+        <div id="aboutus" className="h-screen w-full flex flex-col justify-center items-center ">
+        <p className="text-5xl font-bold pb-5">ABOUT US</p>
+            <div className="grid grid-cols-3 gap-5">
+            <ProductCard></ProductCard>
+            <ProductCard></ProductCard>
+            <ProductCard></ProductCard>
+            </div>
         </div>
     </div>
 }
