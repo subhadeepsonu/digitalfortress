@@ -7,6 +7,8 @@ import { Lato } from "next/font/google";
 import Lottie from "lottie-react";
 import facehome from "@/public/facehome.json"
 import ProductCard from "./card/productCard";
+import Title from "./card/title";
+import {motion} from "framer-motion"
 const Font = Lato({
     subsets:["latin"],
     weight:["900","400"]
@@ -72,7 +74,7 @@ export default function HomePage(){
         
     },[])
     return<div className="h-screen flex-grow w-full bg-white snap-y snap-mandatory scroll-smooth overflow-y-scroll ">
-        <div className="h-20 w-full  z-10 bg-orange-400/10 shadow-sm fixed top-0 backdrop-blur-sm flex justify-between items-center px-5">
+        <div className="h-16 w-full  z-10 bg-orange-400/10 shadow-sm fixed top-0 backdrop-blur-sm flex justify-between items-center px-5">
         <div className="h-full flex justify-center  items-center">
         <img ref={ref1} src="https://digitalfortress.in/_next/static/media/logo.7fbc3c85.svg " className="h-2/3"></img>
         </div>
@@ -110,15 +112,17 @@ export default function HomePage(){
             </div>
         </div>
         <div id="products" className="h-screen w-full flex flex-col justify-center items-center bg-orange-200 snap-start snap-always ">
-            <p className="text-5xl font-bold pb-5">OUR PRODUCTS</p>
+            <Title name="PRODUCTS"></Title>
             <div className="grid grid-cols-3 gap-5">
-            <ProductCard></ProductCard>
-            <ProductCard></ProductCard>
-            <ProductCard></ProductCard>
+            <ProductCard name="Mukham" one="AI-based Attendance System" two="Geo Fencing" three="Data Management" four="3D Maps"></ProductCard>
+            <ProductCard name="MauthN" one="Flexible device usage for authentication." two="Enhanced security with multimodal and multifactor options." three="Platform-independent advanced multifactor authentication." four="Multiple passwordless authentication factors available for users."></ProductCard>
+            <ProductCard name="mIsolate" one="Agentless Security" two="Flexible and Customizable" three="Open-Source Foundations
+
+" four="Complete Endpoint Protection"></ProductCard>
             </div>
         </div>
         <div id="services" className="h-screen w-full flex flex-col justify-center items-center snap-start snap-always bg-orange-50">
-        <p className="text-5xl font-bold pb-5">SERVICES WE OFFER</p>
+            <Title name="SERVICES WE OFFER"></Title>
             <div className="grid grid-cols-3 gap-5">
             <ProductCard></ProductCard>
             <ProductCard></ProductCard>
@@ -126,7 +130,7 @@ export default function HomePage(){
             </div>
         </div>
         <div id="testimonial" className="h-screen w-full flex flex-col justify-center items-center bg-orange-200 snap-start snap-always">
-        <p className="text-5xl font-bold pb-5">TESTIMONIALS</p>
+            <Title name="TESTIMONIALS"></Title>
             <div className="grid grid-cols-3 gap-5">
             <ProductCard></ProductCard>
             <ProductCard></ProductCard>
@@ -134,15 +138,19 @@ export default function HomePage(){
             </div>
         </div>
         <div id="aboutus" className="h-screen w-full flex flex-col justify-center items-center snap-start snap-always bg-orange-50">
-        <p className="text-5xl font-bold pb-5">ABOUT US</p>
-            <div className="grid grid-cols-3 gap-5">
-            <ProductCard></ProductCard>
-            <ProductCard></ProductCard>
-            <ProductCard></ProductCard>
+        <Title name="ABOUT US"></Title>
+            <div className="w-full h-2/3 flex justify-center items-center">
+                <motion.div className=" w-2/3 h-full flex justify-center items-center px-20 text-lg">
+                Our company, DigitalFortress Private Limited, is poised for substantial growth due to the innovative and high-impact nature of our products, MAuthN and Mukham. MAuthN introduces a revolutionary approach to authentication by eliminating traditional passwords and implementing passwordless multi-factor authentication. It ensures robust identity verification through advanced cryptographic techniques, device attestation, and biometrics, thereby mitigating cyber threats and unauthorized access. Mukham, on the other hand, offers state-of-the-art employee monitoring, streamlining workforce management with features such as facial recognition-based attendance tracking, geo-fencing, an anti-spoofing module, and an AI secretary. The compelling reasons behind our company's high growth potential lie in the fact that both products directly address pressing market demands, such as enhanced cybersecurity and operational efficiency, while ensuring a user-friendly experience. Our adaptability to emerging technologies, comprehensive control, data-driven insights, and competitive advantages further bolster our position in the market, making us the preferred choice for businesses across various industries. We are confident that our commitment to innovation and security will continue to drive our growth and success in the digital realm
+                </motion.div>
+                <div className=" w-1/3 h-full">
+                    <img className="h-full  object-cover" src="https://digitalfortress.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FMukham-Poster.9f77aa34.png&w=384&q=75">
+                    </img>
+                </div>
             </div>
         </div>
         <div id="contactus" className="h-screen w-full flex flex-col justify-center items-center snap-start snap-always bg-orange-200 ">
-        <p className="text-5xl font-bold pb-5">CONTACT US</p>
+            <Title name="CONTACT US"></Title>
             <div className="grid grid-cols-3 gap-5">
             <ProductCard></ProductCard>
             <ProductCard></ProductCard>
