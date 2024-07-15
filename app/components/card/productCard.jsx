@@ -23,7 +23,7 @@ export default function ProductCard(props){
             <p className="flex"><TiTick className=" text-orange-800  text-2xl" />{props.one}</p>
             <p className="flex"><TiTick className=" text-orange-800 text-2xl" />{props.two}</p>
             <p className="flex"><TiTick className=" text-orange-800 text-2xl" />{props.three}</p>
-            <p className="flex"><TiTick className=" text-orange-800 text-2xl" />{props.four}</p>
+            <p className="flex"><TiTick className=" text-orange-800 text-2xl" />{props.four}hah</p>
         </div>
     </motion.div>      
 }
