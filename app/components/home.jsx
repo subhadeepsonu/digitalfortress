@@ -77,7 +77,7 @@ export default function HomePage(){
         <img ref={ref1} src="https://digitalfortress.in/_next/static/media/logo.7fbc3c85.svg " className="h-2/3"></img>
         </div>
         <div className="w-1/2 flex justify-between items-center font-medium ">
-            <Link className="hover:underline hover:text-orange-500 " ref={ref2} href={"/#home"} >
+            <Link className="hover:underline  hover:text-orange-500 " ref={ref2} href={"/#home"} >
                 Home
             </Link>
             <Link className="hover:underline hover:text-orange-500 " ref={ref3} href={"/#products"}>
@@ -97,7 +97,7 @@ export default function HomePage(){
             </Link>
         </div>
         </div>
-        <div id="home"  className="h-screen w-full  flex justify-around items-center pt-20 snap-start snap-always ">
+        <div id="home"  className="h-screen w-full  flex justify-around items-center pt-20 snap-start snap-always bg-orange-50 ">
             <div className="w-3/5 h-2/3 flex flex-col justify-around items-start pl-20">
                 <div ref={ref7} className={`${Font.className} w-full font-extrabold text-7xl flex justify-center items-end pb-2 `}>
                 Protect Your Digital World with Passwordless Authentication.
@@ -117,7 +117,7 @@ export default function HomePage(){
             <ProductCard></ProductCard>
             </div>
         </div>
-        <div id="services" className="h-screen w-full flex flex-col justify-center items-center snap-start snap-always">
+        <div id="services" className="h-screen w-full flex flex-col justify-center items-center snap-start snap-always bg-orange-50">
         <p className="text-5xl font-bold pb-5">SERVICES WE OFFER</p>
             <div className="grid grid-cols-3 gap-5">
             <ProductCard></ProductCard>
@@ -133,7 +133,7 @@ export default function HomePage(){
             <ProductCard></ProductCard>
             </div>
         </div>
-        <div id="aboutus" className="h-screen w-full flex flex-col justify-center items-center snap-start snap-always ">
+        <div id="aboutus" className="h-screen w-full flex flex-col justify-center items-center snap-start snap-always bg-orange-50">
         <p className="text-5xl font-bold pb-5">ABOUT US</p>
             <div className="grid grid-cols-3 gap-5">
             <ProductCard></ProductCard>
