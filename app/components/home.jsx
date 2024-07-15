@@ -66,7 +66,7 @@ export default function HomePage(){
         },"-=0.2")
         
     },[])
-    return<div className="h-[500vh] w-full bg-white">
+    return<div className="h-screen flex-grow w-full bg-white snap-y snap-mandatory overflow-y-scroll">
         <div className="h-20 w-full  z-10 bg-orange-400/10 shadow-sm fixed top-0 backdrop-blur-sm flex justify-between items-center px-5">
         <div className="h-full flex justify-center  items-center">
         <img ref={ref1} src="https://digitalfortress.in/_next/static/media/logo.7fbc3c85.svg " className="h-2/3"></img>
@@ -89,7 +89,7 @@ export default function HomePage(){
             </Link>
         </div>
         </div>
-        <div id="home"  className="h-screen w-full  flex justify-around items-center pt-20 ">
+        <div id="home"  className="h-screen w-full  flex justify-around items-center pt-20 snap-start snap-always ">
             <div className="w-3/5 h-2/3 flex flex-col justify-around items-start pl-20">
                 <div ref={ref7} className={`${Font.className} w-full font-extrabold text-7xl flex justify-center items-end pb-2 `}>
                 Protect Your Digital World with Passwordless Authentication.
@@ -101,7 +101,7 @@ export default function HomePage(){
             <Lottie animationData={facehome}></Lottie>
             </div>
         </div>
-        <div id="products" className="h-screen w-full flex flex-col justify-center items-center bg-orange-200 ">
+        <div id="products" className="h-screen w-full flex flex-col justify-center items-center bg-orange-200 snap-start snap-always ">
             <p className="text-5xl font-bold pb-5">OUR PRODUCTS</p>
             <div className="grid grid-cols-3 gap-5">
             <ProductCard></ProductCard>
@@ -109,7 +109,7 @@ export default function HomePage(){
             <ProductCard></ProductCard>
             </div>
         </div>
-        <div id="services" className="h-screen w-full flex flex-col justify-center items-center ">
+        <div id="services" className="h-screen w-full flex flex-col justify-center items-center snap-start snap-always">
         <p className="text-5xl font-bold pb-5">SERVICES WE OFFER</p>
             <div className="grid grid-cols-3 gap-5">
             <ProductCard></ProductCard>
@@ -117,7 +117,7 @@ export default function HomePage(){
             <ProductCard></ProductCard>
             </div>
         </div>
-        <div id="testimonial" className="h-screen w-full flex flex-col justify-center items-center bg-orange-200">
+        <div id="testimonial" className="h-screen w-full flex flex-col justify-center items-center bg-orange-200 snap-start snap-always">
         <p className="text-5xl font-bold pb-5">TESTIMONIALS</p>
             <div className="grid grid-cols-3 gap-5">
             <ProductCard></ProductCard>
@@ -125,7 +125,7 @@ export default function HomePage(){
             <ProductCard></ProductCard>
             </div>
         </div>
-        <div id="aboutus" className="h-screen w-full flex flex-col justify-center items-center ">
+        <div id="aboutus" className="h-screen w-full flex flex-col justify-center items-center snap-start snap-always ">
         <p className="text-5xl font-bold pb-5">ABOUT US</p>
             <div className="grid grid-cols-3 gap-5">
             <ProductCard></ProductCard>
