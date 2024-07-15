@@ -5,7 +5,7 @@ import { useGSAP } from "@gsap/react";
 import Link from "next/link";
 import { Lato } from "next/font/google";
 import Lottie from "lottie-react";
-import facehome from "@/public/facehome.json"
+import facehome from "@/public/homeface.json"
 import ProductCard from "./card/productCard";
 import Title from "./card/title";
 import {motion} from "framer-motion"
