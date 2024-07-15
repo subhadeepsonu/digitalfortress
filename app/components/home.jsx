@@ -71,7 +71,7 @@ export default function HomePage(){
         },"-=0.2")
         
     },[])
-    return<div className="h-screen flex-grow w-full bg-white snap-y snap-mandatory scroll-smooth overflow-y-scroll">
+    return<div className="h-screen flex-grow w-full bg-white snap-y snap-mandatory scroll-smooth overflow-y-scroll ">
         <div className="h-20 w-full  z-10 bg-orange-400/10 shadow-sm fixed top-0 backdrop-blur-sm flex justify-between items-center px-5">
         <div className="h-full flex justify-center  items-center">
         <img ref={ref1} src="https://digitalfortress.in/_next/static/media/logo.7fbc3c85.svg " className="h-2/3"></img>
