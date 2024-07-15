@@ -5,7 +5,7 @@ import { useGSAP } from "@gsap/react";
 import Link from "next/link";
 import { Lato } from "next/font/google";
 import Lottie from "lottie-react";
-import facehome from "@/public/homeface.json"
+import homeface from "../../public/homeanimate.json"
 import ProductCard from "./card/productCard";
 import Title from "./card/title";
 import {motion} from "framer-motion"
@@ -108,7 +108,9 @@ export default function HomePage(){
                 <button ref={ref10} className="flex justify-center items-center px-3 py-1 bg-orange-500 text-white rounded-lg text-xl">Contact us!</button>
             </div>
             <div ref={ref9} className=" h-full w-2/5 flex justify-center items-center">
-            <Lottie animationData={facehome}></Lottie>
+            <Lottie animationData={homeface
+                
+            }></Lottie>
             </div>
         </div>
         <div id="products" className="h-screen w-full flex flex-col justify-center items-center bg-orange-200 snap-start snap-always ">
