@@ -9,6 +9,10 @@ import homeface from "../../public/homeanimate.json"
 import ProductCard from "./card/productCard";
 import Title from "./card/title";
 import {motion} from "framer-motion"
+import { IoLogoLinkedin } from "react-icons/io";
+import { FaInstagramSquare } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 const Font = Lato({
     subsets:["latin"],
     weight:["900","400"]
@@ -108,9 +112,7 @@ export default function HomePage(){
                 <button ref={ref10} className="flex justify-center items-center px-3 py-1 bg-orange-500 text-white rounded-lg text-xl">Contact us!</button>
             </div>
             <div ref={ref9} className=" h-full w-2/5 flex justify-center items-center">
-            <Lottie animationData={homeface
-
-            }></Lottie>
+            <Lottie animationData={homeface}></Lottie>
             </div>
         </div>
         <div id="products" className="h-screen w-full flex flex-col justify-center items-center bg-orange-200 snap-start snap-always ">
@@ -153,10 +155,38 @@ export default function HomePage(){
         </div>
         <div id="contactus" className="h-screen w-full flex flex-col justify-center items-center snap-start snap-always bg-orange-200 ">
             <Title name="CONTACT US"></Title>
-            <div className="grid grid-cols-3 gap-5">
-            <ProductCard></ProductCard>
-            <ProductCard></ProductCard>
-            <ProductCard></ProductCard>
+            <div className="w-2/3 shadow-sm h-3/5 flex bg-orange-50 rounded-lg">
+            <div className="w-1/2 h-full flex justify-around items-center  flex-col">
+                <div className="w-full h-1/3  flex justify-around items-center flex-col">
+                <p className="text-2xl font-bold">Want to meet in-person?</p>
+                <p>Our office</p>
+                <p>VIT-AP CB</p>
+                <p>Amaravathi,Andhra Pradesh 522237</p>
+                </div>
+                <div className="w-full  h-1/3  flex flex-col justify-around items-center">
+                    <p className="text-2xl font-bold">Social Links</p>
+                    <div className="w-1/2 justify-between items-center flex"><IoLogoLinkedin className="text-4xl cursor-pointer" /><FaInstagramSquare className="text-4xl cursor-pointer" /><FaTwitter className="text-4xl cursor-pointer" /><FaFacebook className="text-4xl cursor-pointer" /></div>
+                </div>
+            </div>
+            <div className="">
+
+            </div>
+                <div className="h-full w-1/2 flex  justify-center  items-center">
+                <div className="h-4/6 w-2/3 flex flex-col justify-around items-start">
+                <p className="font-bold text-2xl">Mail Us</p>
+                <div className="flex flex-col"> 
+                <label>email</label>
+                <input className="rounded-lg w-full p-2 mt-2" type="email"></input>
+                </div>
+                <div>
+                <label>content</label>
+                <textarea className="w-full rounded-lg p-2 mt-2"></textarea>
+                </div>
+                <button className="px-4 py-1 bg-orange-800 text-white rounded-lg">Mail</button>
+                </div>
+                </div>
+                
+        
             </div>
         </div>
     </div>
