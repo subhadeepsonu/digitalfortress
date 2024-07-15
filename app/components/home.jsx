@@ -22,6 +22,7 @@ export default function HomePage(){
     const ref8 = useRef(null)
     const ref9 = useRef(null)
     const ref10 = useRef(null)
+    const ref11 = useRef(null)
     useGSAP(()=>{
         const tl = gsap.timeline()
         tl.from(ref1.current,{
@@ -48,6 +49,10 @@ export default function HomePage(){
             y:-10,opacity:0,
             duration:0.15
         })
+        tl.from(ref11.current,{
+            y:-10,opacity:0,
+            duration:0.15
+        })
         tl.from(ref7.current,{
             opacity:0,
             duration:0.3
@@ -71,7 +76,7 @@ export default function HomePage(){
         <div className="h-full flex justify-center  items-center">
         <img ref={ref1} src="https://digitalfortress.in/_next/static/media/logo.7fbc3c85.svg " className="h-2/3"></img>
         </div>
-        <div className="w-1/3 flex justify-between items-center font-medium ">
+        <div className="w-1/2 flex justify-between items-center font-medium ">
             <Link className="hover:underline hover:text-orange-500 " ref={ref2} href={"/#home"} >
                 Home
             </Link>
@@ -85,7 +90,10 @@ export default function HomePage(){
                 Testimonials
             </Link>
             <Link className="hover:underline hover:text-orange-500 " ref={ref6} href={"/#aboutus"}>
-                About Us
+                About 
+            </Link>
+            <Link className="hover:underline hover:text-orange-500 " ref={ref11} href={"/#contactus"}>
+                Contact 
             </Link>
         </div>
         </div>
@@ -127,6 +135,14 @@ export default function HomePage(){
         </div>
         <div id="aboutus" className="h-screen w-full flex flex-col justify-center items-center snap-start snap-always ">
         <p className="text-5xl font-bold pb-5">ABOUT US</p>
+            <div className="grid grid-cols-3 gap-5">
+            <ProductCard></ProductCard>
+            <ProductCard></ProductCard>
+            <ProductCard></ProductCard>
+            </div>
+        </div>
+        <div id="contactus" className="h-screen w-full flex flex-col justify-center items-center snap-start snap-always bg-orange-200 ">
+        <p className="text-5xl font-bold pb-5">CONTACT US</p>
             <div className="grid grid-cols-3 gap-5">
             <ProductCard></ProductCard>
             <ProductCard></ProductCard>
