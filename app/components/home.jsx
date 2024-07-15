@@ -109,7 +109,7 @@ export default function HomePage(){
             </div>
             <div ref={ref9} className=" h-full w-2/5 flex justify-center items-center">
             <Lottie animationData={homeface
-                
+
             }></Lottie>
             </div>
         </div>
@@ -143,7 +143,7 @@ export default function HomePage(){
         <Title name="ABOUT US"></Title>
             <div className="w-full h-2/3 flex justify-center items-center">
                 <motion.div className=" w-2/3 h-full flex justify-center items-center px-20 text-lg">
-                Our company, DigitalFortress Private Limited, is poised for substantial growth due to the innovative and high-impact nature of our products, MAuthN and Mukham. MAuthN introduces a revolutionary approach to authentication by eliminating traditional passwords and implementing passwordless multi-factor authentication. It ensures robust identity verification through advanced cryptographic techniques, device attestation, and biometrics, thereby mitigating cyber threats and unauthorized access. Mukham, on the other hand, offers state-of-the-art employee monitoring, streamlining workforce management with features such as facial recognition-based attendance tracking, geo-fencing, an anti-spoofing module, and an AI secretary. The compelling reasons behind our company's high growth potential lie in the fact that both products directly address pressing market demands, such as enhanced cybersecurity and operational efficiency, while ensuring a user-friendly experience. Our adaptability to emerging technologies, comprehensive control, data-driven insights, and competitive advantages further bolster our position in the market, making us the preferred choice for businesses across various industries. We are confident that our commitment to innovation and security will continue to drive our growth and success in the digital realm
+                
                 </motion.div>
                 <div className=" w-1/3 h-full">
                     <img className="h-full  object-cover" src="https://digitalfortress.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FMukham-Poster.9f77aa34.png&w=384&q=75">
