@@ -1,5 +1,4 @@
 "use client"
-import {motion} from "framer-motion"
 import Link from "next/link";
 import { useState } from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";

@@ -13,12 +13,15 @@ import { IoLogoLinkedin } from "react-icons/io";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
+import { useRouter } from "next/navigation";
+
 const Font = Lato({
     subsets:["latin"],
     weight:["900","400"]
 })
 
 export default function HomePage(){
+    const router = useRouter()
     const [color,setColor] = useState("bg-gradient-to-b from-gray-50 to-orange-200")
     const ref1 = useRef(null)
     const ref2 = useRef(null)
@@ -118,7 +121,9 @@ export default function HomePage(){
                 </div>
                 {/* <p ref={ref8} className={` text-xl text-orange-500 ${Font.className} tracking-tighter`}>DigitalFortress Private Limited offers a secure and convenient passwordless authentication solution to safeguard your online accounts and prevent cyber attacks. Say goodbye to the hassle of remembering passwords and protect your digital identity with ease.</p> */}
                 <div ref={ref10} className="bg-black">
-                <button ref={ref10} className="flex z-10  justify-center items-center -translate-y-2 -translate-x-2 px-3 py-1 bg-orange-500 text-white  text-xl">Contact us!</button>
+                <button onClick={()=>{
+                    router.push("/#contactus")
+                }} ref={ref10} className="flex z-10  justify-center items-center -translate-y-2 -translate-x-2 px-3 py-1 bg-orange-500 text-white  text-xl">Contact us!</button>
                 </div>
             </div>
             <div ref={ref9} className=" h-full w-1/2 flex justify-center items-center">
