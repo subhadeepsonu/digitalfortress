@@ -122,7 +122,7 @@ export default function HomePage(){
                 </div>
             </div>
             <div ref={ref9} className=" h-full w-1/2 flex justify-center items-center">
-            <Lottie animationData={homeface}></Lottie>
+            <Lottie  animationData={homeface}></Lottie>
             </div>
         </div>
         <div id="products" className={`h-screen w-full flex flex-col justify-center items-center  snap-start snap-always ${color} `}>
