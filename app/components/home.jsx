@@ -132,8 +132,8 @@ export default function HomePage(){
         </div>
         <div id="products" className={`h-screen w-full flex flex-col justify-center items-center  snap-start snap-always ${color} `}>
             <Title name="PRODUCTS"></Title>
-            <div className="grid grid-cols-3 gap-8">
-            <div onMouseEnter={()=>{
+            <div className="grid grid-cols-3 gap-10">
+            <div className="cursor-pointer" onMouseEnter={()=>{
                 setColor("bg-gradient-to-b from-gray-50 to-rose-200")
             }}
             onMouseLeave={()=>{
@@ -142,7 +142,7 @@ export default function HomePage(){
             >
             <ProductCard bg="bg-red-200" name="Mukham" one="AI-based Attendance System" two="Geo Fencing" three="Data Management" four="3D Maps"></ProductCard>
             </div>
-            <div  onMouseEnter={()=>{
+            <div className="cursor-pointer" onMouseEnter={()=>{
                 setColor("bg-gradient-to-b from-gray-50 to-green-200")
             }}
             onMouseLeave={()=>{
@@ -151,7 +151,7 @@ export default function HomePage(){
             >
             <ProductCard bg="bg-green-200" name="MauthN" one="Flexible device usage for authentication." two="Enhanced security with multimodal and multifactor options." three="Platform-independent advanced multifactor authentication." four="Multiple passwordless authentication factors available for users."></ProductCard>
             </div>
-            <div  onMouseEnter={()=>{
+            <div className="cursor-pointer" onMouseEnter={()=>{
                 setColor("bg-gradient-to-b from-gray-50 to-blue-200")
             }}
             onMouseLeave={()=>{
