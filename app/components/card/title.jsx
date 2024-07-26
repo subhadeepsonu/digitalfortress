@@ -1,7 +1,7 @@
 "use client"
 import { motion } from "framer-motion"
 export default function Title(props){
-    return <motion.div initial={{
+    return <div initial={{
         opacity:0,
         y:-100
     }} 
@@ -17,5 +17,5 @@ export default function Title(props){
     className="text-5xl font-bold pb-10"
     >
         {props.name}
-    </motion.div>
+    </div>
 }

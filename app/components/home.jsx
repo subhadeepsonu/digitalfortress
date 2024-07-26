@@ -1,6 +1,6 @@
 "use client"
 import {gsap} from "gsap"
-import {useRef } from 'react';
+import {useRef, useState } from 'react';
 import { useGSAP } from "@gsap/react";
 import Link from "next/link";
 import { Lato } from "next/font/google";
@@ -19,6 +19,7 @@ const Font = Lato({
 })
 
 export default function HomePage(){
+    const [color,setColor] = useState("bg-gradient-to-b from-gray-50 to-orange-200")
     const ref1 = useRef(null)
     const ref2 = useRef(null)
     const ref3 = useRef(null)
@@ -104,7 +105,7 @@ export default function HomePage(){
             </Link>
         </div>
         </div>
-        <div id="home"  className="h-screen w-full  flex justify-around items-center pt-16 snap-start snap-always bg-orange-50 ">
+        <div id="home"  className="h-screen w-full  flex justify-around items-center pt-16 snap-start snap-always bg-gradient-to-t from-gray-50 to-orange-200 ">
             <div className="w-1/2 h-full flex flex-col justify-center items-start pl-20 border-r-[3px] border-black">
                 <div ref={ref7} className={`${Font.className} flex-col pb-10 tracking-tighter leading-tight w-full font-extrabold text-7xl flex justify-center   `}>
                     <p>Protect Your Digital World with </p>
@@ -124,17 +125,38 @@ export default function HomePage(){
             <Lottie animationData={homeface}></Lottie>
             </div>
         </div>
-        <div id="products" className="h-screen w-full flex flex-col justify-center items-center bg-orange-200 snap-start snap-always ">
+        <div id="products" className={`h-screen w-full flex flex-col justify-center items-center  snap-start snap-always ${color} `}>
             <Title name="PRODUCTS"></Title>
-            <div className="grid grid-cols-3 gap-5">
-            <ProductCard name="Mukham" one="AI-based Attendance System" two="Geo Fencing" three="Data Management" four="3D Maps"></ProductCard>
-            <ProductCard name="MauthN" one="Flexible device usage for authentication." two="Enhanced security with multimodal and multifactor options." three="Platform-independent advanced multifactor authentication." four="Multiple passwordless authentication factors available for users."></ProductCard>
-            <ProductCard name="mIsolate" one="Agentless Security" two="Flexible and Customizable" three="Open-Source Foundations
-
-" four="Complete Endpoint Protection"></ProductCard>
+            <div className="grid grid-cols-3 gap-8">
+            <div onMouseEnter={()=>{
+                setColor("bg-gradient-to-b from-gray-50 to-rose-200")
+            }}
+            onMouseLeave={()=>{
+                setColor("bg-gradient-to-b from-gray-50 to-orange-200")
+            }}
+            >
+            <ProductCard bg="bg-red-200" name="Mukham" one="AI-based Attendance System" two="Geo Fencing" three="Data Management" four="3D Maps"></ProductCard>
+            </div>
+            <div  onMouseEnter={()=>{
+                setColor("bg-gradient-to-b from-gray-50 to-green-200")
+            }}
+            onMouseLeave={()=>{
+                setColor("bg-gradient-to-b from-gray-50 to-orange-200")
+            }}
+            >
+            <ProductCard bg="bg-green-200" name="MauthN" one="Flexible device usage for authentication." two="Enhanced security with multimodal and multifactor options." three="Platform-independent advanced multifactor authentication." four="Multiple passwordless authentication factors available for users."></ProductCard>
+            </div>
+            <div  onMouseEnter={()=>{
+                setColor("bg-gradient-to-b from-gray-50 to-blue-200")
+            }}
+            onMouseLeave={()=>{
+                setColor("bg-gradient-to-b from-gray-50 to-orange-200")
+            }}>
+            <ProductCard bg="bg-blue-200" name="mIsolate" one="Agentless Security" two="Flexible and Customizable" three="Open-Source Foundations" four="Complete Endpoint Protection"></ProductCard>
+            </div>
             </div>
         </div>
-        <div id="services" className="h-screen w-full flex flex-col justify-center items-center snap-start snap-always bg-orange-50">
+        <div id="services" className="h-screen w-full flex flex-col justify-center items-center snap-start snap-always bg-gradient-to-t from-gray-50 to-orange-200">
             <Title name="SERVICES WE OFFER"></Title>
             <div className="grid grid-cols-3 gap-5">
             <ProductCard></ProductCard>
@@ -142,7 +164,7 @@ export default function HomePage(){
             <ProductCard></ProductCard>
             </div>
         </div>
-        <div id="testimonial" className="h-screen w-full flex flex-col justify-center items-center bg-orange-200 snap-start snap-always">
+        <div id="testimonial" className="h-screen w-full flex flex-col justify-center items-center bg-gradient-to-b from-gray-50 to-orange-200 snap-start snap-always">
             <Title name="TESTIMONIALS"></Title>
             <div className="grid grid-cols-3 gap-5">
             <ProductCard></ProductCard>
@@ -150,7 +172,7 @@ export default function HomePage(){
             <ProductCard></ProductCard>
             </div>
         </div>
-        <div id="aboutus" className="h-screen w-full flex flex-col justify-center items-center snap-start snap-always bg-orange-50">
+        <div id="aboutus" className="h-screen w-full flex flex-col justify-center items-center snap-start snap-always bg-gradient-to-t from-gray-50 to-orange-200">
         <Title name="ABOUT US"></Title>
             <div className="w-full h-2/3 flex justify-center items-center">
                 <motion.div className=" w-2/3 h-full flex justify-center items-center px-20 text-lg">
@@ -162,7 +184,7 @@ export default function HomePage(){
                 </div>
             </div>
         </div>
-        <div id="contactus" className="h-screen w-full flex flex-col justify-center items-center snap-start snap-always bg-orange-200 ">
+        <div id="contactus" className="h-screen w-full flex flex-col justify-center items-center snap-start snap-always bg-gradient-to-b from-gray-50 to-orange-200 ">
             <Title name="CONTACT US"></Title>
             <motion.div initial={{
                 opacity:0
