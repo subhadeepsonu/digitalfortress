@@ -8,7 +8,7 @@ import Lottie from "lottie-react";
 import homeface from "../../public/homeanimate.json"
 import ProductCard from "./card/productCard";
 import Title from "./card/title";
-import {motion} from "framer-motion"
+import { FaArrowRight } from "react-icons/fa";
 import { IoLogoLinkedin } from "react-icons/io";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
@@ -182,8 +182,9 @@ export default function HomePage(){
                }} onMouseLeave={()=>{
                 setImg("https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649")
                 Setrotate("")
-               }} className="h-1/5 w-full flex justify-center items-center border-t-2 border-b-2 border-black ">
-                1
+               }} className="h-1/5 w-full flex justify-between px-5 items-center border-t-2 border-b-2 border-black ">
+                <p>Achivement 1</p>
+                <Link href={"/"}>View</Link>
                </div>
                <div  onMouseEnter={()=>{
                 setImg("https://img.freepik.com/free-photo/colorful-design-with-spiral-design_188544-9588.jpg")
@@ -191,8 +192,9 @@ export default function HomePage(){
                }} onMouseLeave={()=>{
                 setImg("https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649")
                 Setrotate("")
-               }} className="h-1/5 w-full flex justify-center items-center  border-b-2 border-black  ">
-                2
+               }} className="h-1/5 w-full flex justify-between px-5 items-center  border-b-2 border-black  ">
+                <p>Achivement 2</p>
+                <Link href={"/"}>View</Link>
                </div>
                <div   onMouseEnter={()=>{
                 setImg("https://www.shutterstock.com/image-photo/beautiful-pink-flower-anemones-fresh-260nw-1028135845.jpg")
@@ -200,8 +202,9 @@ export default function HomePage(){
                }} onMouseLeave={()=>{
                 setImg("https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649")
                 Setrotate("")
-               }} className="h-1/5 w-full  flex justify-center items-center border-b-2 border-black ">
-                3
+               }} className="h-1/5 w-full  flex justify-between  px-5 items-center border-b-2 border-black ">
+                <p>Achivement 3</p>
+                <Link href={"/"}>View</Link>
                </div>
                <div   onMouseEnter={()=>{
                 setImg("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg")
@@ -209,8 +212,9 @@ export default function HomePage(){
                }} onMouseLeave={()=>{
                 setImg("https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649")
                 Setrotate("")
-               }} className="h-1/5 w-full flex justify-center items-center  border-b-2 border-black ">
-                4
+               }} className="h-1/5 w-full flex justify-between items-center px-5  border-b-2 border-black ">
+                <p>Achivement 4</p>
+                <Link href={"/"}>View</Link>
                </div>
                
             </div>
