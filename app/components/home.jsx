@@ -241,14 +241,21 @@ export default function HomePage(){
            </div>
            <Contactus></Contactus>
            <div className="bg-white/15 backdrop-blur-sm h-96 w-96 flex flex-col justify-center items-center rounded-lg">
-                        {/* <p className="font-semibold text-2xl">Mail</p> */}
-                        <div>
-                            <p>Careers</p>
-                            <p></p>
-                        </div>
-                        <div>
-                            <p>Press</p>
-                            <p></p>
+               <div className="h-1/2 flex justify-around items-start px-10 flex-col w-full">
+               <p className="text-2xl font-bold">Mail</p>
+               <div>
+                <p className="text-xl font-semibold">Careers</p>
+                <p className="text-sm">careers@digitalfortress.in</p>
+            </div>
+            <div>
+                <p className="text-xl font-semibold">Press</p>
+                <p className="text-sm">press@digitalfortress.in</p>
+                </div>
+               </div>
+               <div className="h-1/2 w-full px-10 flex flex-col justify-around items-center">
+                        <input type="email" className="p-2 rounded-lg w-full bg-transparent border-2 border-zinc-400" placeholder="email"></input>
+                        <textarea className="p-2 rounded-lg w-full bg-transparent border-2 border-zinc-400" placeholder="content"></textarea>
+                        <button className="px-3 rounded-lg text-xl  py-1 bg-orange-200">Mail</button>
                         </div>
            </div>
             
