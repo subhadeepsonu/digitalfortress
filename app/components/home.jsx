@@ -13,15 +13,18 @@ import { IoLogoLinkedin } from "react-icons/io";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
+import Contactus from "../components/contact"
 import { useRouter } from "next/navigation";
 import ReviewCard from "./card/reviewcard";
-import { Swiper, SwiperSlide } from 'swiper/react';
+
 const Font = Lato({
     subsets:["latin"],
     weight:["900","400"]
 })
 
 export default function HomePage(){
+    const [img,setImg]= useState("https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649")
+    const [rotate,Setrotate]= useState("")
     const router = useRouter()
     const [color,setColor] = useState("bg-gradient-to-b from-gray-50 to-orange-200")
     const ref1 = useRef(null)
@@ -107,19 +110,19 @@ export default function HomePage(){
         </div>
         </div>
         <div id="home"  className="h-screen w-full  flex justify-around items-center pt-16 snap-start snap-always bg-gradient-to-t from-gray-50 to-orange-200 ">
-            <div className="w-1/2 h-full flex flex-col justify-center items-start pl-20 ">
-                <div ref={ref7} className={`${Font.className} flex-col pb-10 tracking-tighter leading-tight w-full font-extrabold text-6xl flex justify-center   `}>
+            <div className="w-3/5 h-full flex flex-col justify-center items-start pl-20 ">
+                <div ref={ref7} className={`${Font.className} tracking-wide flex-col pb-10  leading-tight w-full font-extrabold text-6xl flex justify-center   `}>
                     Protect Your Digital World with Passwordless Authentication.
                 </div>
-                <p ref={ref8} className={` text-lg text-orange-500 font-light tracking-tighter`}>DigitalFortress Private Limited offers a secure and convenient passwordless authentication solution to safeguard your online accounts and prevent cyber attacks. Say goodbye to the hassle of remembering passwords and protect your digital identity with ease.</p>
-                <div ref={ref10} className="bg-black mt-10">
+                <p ref={ref8} className={` text-orange-600 font-ligh `}>DigitalFortress Private Limited offers a secure and convenient passwordless authentication solution to safeguard your online accounts and prevent cyber attacks. Say goodbye to the hassle of remembering passwords and protect your digital identity with ease.</p>
+                <div ref={ref10} className=" mt-10">
                 <button onClick={()=>{
                     router.push("/#contactus")
-                }} ref={ref10} className="flex z-10 -2 justify-center items-center -translate-y-2 -translate-x-2 px-3 py-1 bg-orange-500 text-white  text-xl">Contact us!</button>
+                }} ref={ref10} className="flex z-10 -2 justify-center rounded-lg items-center px-3 py-1 bg-orange-500 text-white  text-xl">Contact us !</button>
                 </div>
             </div>
-            <div ref={ref9} className=" h-full w-1/2 flex justify-center items-center">
-            <Lottie  animationData={homeface}></Lottie>
+            <div ref={ref9} className=" h-full w-2/5 flex justify-center items-center">
+            <Lottie className="h-2/3"  animationData={homeface}></Lottie>
             </div>
         </div>
         <div id="products"  className={`h-screen w-full flex flex-col justify-center items-center  snap-start snap-always ${color} `}>
@@ -162,58 +165,89 @@ export default function HomePage(){
             <ReviewCard img={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaaFMnnp2jVk3HXJf98HdhFu8L8lCsXAGHaA&s"} star={"⭐⭐⭐⭐⭐"} name={"Subhadeep Thandaka"} productname={"Mukham"}></ReviewCard>
             <ReviewCard img={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXHZTQs8ojYjldwZDeEM73Fk6h4BOOXGRL1A&s"} star={"⭐⭐⭐⭐"} name={"Achyut Badyal"} productname={"MauthN"}></ReviewCard>
             <ReviewCard img={"https://t4.ftcdn.net/jpg/03/26/98/51/360_F_326985142_1aaKcEjMQW6ULp6oI9MYuv8lN9f8sFmj.jpg"} star={"⭐⭐⭐⭐⭐"} name={"Adithya Sai "} productname={"Mlsolate"}></ReviewCard>
-         
             </div>
-    
         </div>
         <div id="aboutus" className="h-screen w-full flex flex-col justify-center items-center snap-start snap-always bg-gradient-to-b from-gray-50 to-orange-200">
-        <Title name="ABOUT US"></Title>
-            <div className="w-full h-2/3 flex justify-center items-center">
-                <motion.div className=" w-2/3 h-full flex justify-center items-center px-20 text-lg">
-                
-                </motion.div>
-                <div className=" w-1/3 h-full">
-                    <img className="h-full  object-cover" src="https://digitalfortress.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FMukham-Poster.9f77aa34.png&w=384&q=75">
-                    </img>
-                </div>
+        <div className="flex h-full w-full  justify-around items-center">
+        <div className={`h-2/3 w-1/3  ${rotate}`}>
+            <img className={`w-full h-full object-cover  `} src={img}></img>
             </div>
+            <div className="w-1/2 h-2/3 flex flex-col justify-center items-center">
+            <div className="h-1/5 w-full flex justify-start items-center  text-6xl font-semibold ">
+                Nice to meet you
+               </div>
+               <div onMouseEnter={()=>{
+                setImg("https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg")
+                Setrotate("rotate-3")
+               }} onMouseLeave={()=>{
+                setImg("https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649")
+                Setrotate("")
+               }} className="h-1/5 w-full flex justify-center items-center border-t-2 border-b-2 border-black ">
+                1
+               </div>
+               <div  onMouseEnter={()=>{
+                setImg("https://img.freepik.com/free-photo/colorful-design-with-spiral-design_188544-9588.jpg")
+                Setrotate("-rotate-3")
+               }} onMouseLeave={()=>{
+                setImg("https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649")
+                Setrotate("")
+               }} className="h-1/5 w-full flex justify-center items-center  border-b-2 border-black  ">
+                2
+               </div>
+               <div   onMouseEnter={()=>{
+                setImg("https://www.shutterstock.com/image-photo/beautiful-pink-flower-anemones-fresh-260nw-1028135845.jpg")
+                Setrotate("rotate-3")
+               }} onMouseLeave={()=>{
+                setImg("https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649")
+                Setrotate("")
+               }} className="h-1/5 w-full  flex justify-center items-center border-b-2 border-black ">
+                3
+               </div>
+               <div   onMouseEnter={()=>{
+                setImg("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg")
+                Setrotate("-rotate-3")
+               }} onMouseLeave={()=>{
+                setImg("https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649")
+                Setrotate("")
+               }} className="h-1/5 w-full flex justify-center items-center  border-b-2 border-black ">
+                4
+               </div>
+               
+            </div>
+            
         </div>
-        <div id="contactus" className="h-screen w-full flex flex-col justify-center items-center snap-start snap-always bg-gradient-to-t from-gray-50 to-orange-200 ">
-            <Title name="CONTACT US"></Title>
-            <div
-            className="w-2/3 shadow-sm h-3/5 flex bg-orange-50 ">
-            <div className="w-1/2 h-full flex justify-around items-center  flex-col">
-                <div className="w-full h-1/3  flex justify-around items-center flex-col">
-                <p className="text-2xl font-bold">Want to meet in-person?</p>
-                <p>Our office</p>
-                <p>VIT-AP CB</p>
-                <p>Amaravathi,Andhra Pradesh 522237</p>
-                </div>
-                <div className="w-full  h-1/3  flex flex-col justify-around items-center">
-                    <p className="text-2xl font-bold">Social Links</p>
-                    <div className="w-1/2 justify-between items-center flex"><IoLogoLinkedin className="hover:scale-105 hover:text-orange-800 duration-100 text-5xl cursor-pointer" /><FaInstagramSquare className="hover:scale-105 hover:text-orange-800 duration-100 text-4xl cursor-pointer" /><FaTwitter className="hover:scale-105 hover:text-orange-800 duration-100 text-4xl cursor-pointer" /><FaFacebook className="hover:scale-105 hover:text-orange-800 duration-100 text-4xl cursor-pointer" /></div>
-                </div>
-            </div>
-            <div className="">
-
-            </div>
-                <div className="h-full w-1/2 flex  justify-center  items-center">
-                <div className="h-4/6 w-2/3 flex flex-col justify-around items-start">
-                <p className="font-bold text-2xl">Mail Us</p>
-                <div className="flex flex-col"> 
-                <label>email</label>
-                <input className=" rounded-lg w-full p-2 mt-2" type="email"></input>
-                </div>
-                <div>
-                <label>content</label>
-                <textarea className="w-full rounded-lg p-2 mt-2"></textarea>
-                </div>
-                <button className="px-4 py-1 bg-orange-800 text-white rounded-lg">Mail</button>
-                </div>
-                </div>
-                
-        
-            </div>
+        </div>
+        <div id="contactus" className="h-screen w-full flex  justify-around items-center snap-start snap-always bg-gradient-to-t from-gray-50 to-orange-200 ">
+           <div className="bg-white/15 backdrop-blur-sm h-96 w-96 flex flex-col justify-evenly items-center rounded-lg">
+                        {/* <p className="font-semibold text-3xl">Office</p> */}
+                        <div className="flex flex-col justify-center items-start">
+                            <p className="font-bold text-lg">VIT-AP</p>
+                            <p>VIT-AP Central Block</p>
+                            <p>Amravathi,Andhra Pradesh 522237</p>
+                        </div>
+                      <div>
+                        <p className="font-bold text-lg">Follow Us</p>
+                        <div className="flex w-[260px] justify-between pt-4 ">
+                        <FaFacebook className="text-3xl cursor-pointer hover:scale-125 duration-100 hover:text-orange-400"></FaFacebook>
+                        <FaInstagramSquare className="text-3xl cursor-pointer hover:scale-125 duration-100 hover:text-orange-400"></FaInstagramSquare>
+                        <FaTwitter className="text-3xl cursor-pointer hover:scale-125 duration-100 hover:text-orange-400"></FaTwitter>
+                        <IoLogoLinkedin className="text-3xl cursor-pointer hover:scale-125 duration-100 hover:text-orange-400"></IoLogoLinkedin>
+                        </div>
+                      </div>
+           </div>
+           <Contactus></Contactus>
+           <div className="bg-white/15 backdrop-blur-sm h-96 w-96 flex flex-col justify-center items-center rounded-lg">
+                        {/* <p className="font-semibold text-2xl">Mail</p> */}
+                        <div>
+                            <p>Careers</p>
+                            <p></p>
+                        </div>
+                        <div>
+                            <p>Press</p>
+                            <p></p>
+                        </div>
+           </div>
+            
         </div>
     </div>
 }
