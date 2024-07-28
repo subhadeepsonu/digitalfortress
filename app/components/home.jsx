@@ -82,55 +82,46 @@ export default function HomePage(){
         },"-=0.2")
         
     },[])
-    return<div className="h-screen flex-grow w-full bg-white snap-y snap-mandatory scroll-smooth overflow-y-scroll ">
-        <div className="h-16 w-full  z-10 bg-orange-400 border-b-[3px]  border-black shadow-sm fixed top-0 backdrop-blur-sm flex justify-between items-center px-5">
+    return<div className="h-screen flex-grow w-full bg-white snap-y snap-mandatory scroll-smooth overflow-y-scroll overflow-x-hidden">
+        <div className="h-16 w-full  z-10 bg-white/15 shadow-sm fixed top-0 backdrop-blur-sm flex justify-between items-center px-5">
         <div className="h-full flex justify-center  items-center">
-        <p ref={ref1} className="text-3xl font-bold  tracking-tighter">DIGITAL FORTRESS</p>
+        <img ref={ref1} src="https://digitalfortress.in/_next/static/media/logo.7fbc3c85.svg" className="h-2/3 "></img>
         </div>
-        <div className="w-1/2 flex justify-between items-center font-medium  ">
-            <Link className=" text-sm" ref={ref2} href={"/#home"} >
-                HOME
+        <div className="w-1/3 flex justify-between items-center font-medium ">
+            <Link className="" ref={ref2} href={"/#home"} >
+                Home
             </Link>
-            <Link className=" text-sm" ref={ref3} href={"/#products"}>
-                PRODUCTS
+            <Link className="" ref={ref3} href={"/#products"}>
+                Products
             </Link>
-            <Link className="  text-sm" ref={ref4} href={"/#services"}>
-                SERVICES
+            <Link className=" " ref={ref5} href={"/#testimonial"}>
+                Testimonials
             </Link>
-            <Link className="  text-sm" ref={ref5} href={"/#testimonial"}>
-                TESTIMONIALS
+            <Link className=" " ref={ref6} href={"/#aboutus"}>
+                About
             </Link>
-            <Link className="  text-sm" ref={ref6} href={"/#aboutus"}>
-                ABOUT
-            </Link>
-            <Link className="  text-sm" ref={ref11} href={"/#contactus"}>
-                CONTACT
+            <Link className=" " ref={ref11} href={"/#contactus"}>
+                Contact
             </Link>
         </div>
         </div>
         <div id="home"  className="h-screen w-full  flex justify-around items-center pt-16 snap-start snap-always bg-gradient-to-t from-gray-50 to-orange-200 ">
-            <div className="w-1/2 h-full flex flex-col justify-center items-start pl-20 border-r-[3px] border-black">
-                <div ref={ref7} className={`${Font.className} flex-col pb-10 tracking-tighter leading-tight w-full font-extrabold text-7xl flex justify-center   `}>
-                    <p>Protect Your Digital World with </p>
-                    <p className="bg-black w-fit px-1 tracking-normal">
-        
-                    <p className="bg-orange-400 -translate-y-2 -translate-x-2  px-1">Passwordless</p>
-                    
-                        </p>
-                    <p> Authentication.</p>
+            <div className="w-1/2 h-full flex flex-col justify-center items-start pl-20 ">
+                <div ref={ref7} className={`${Font.className} flex-col pb-10 tracking-tighter leading-tight w-full font-extrabold text-6xl flex justify-center   `}>
+                    Protect Your Digital World with Passwordless Authentication.
                 </div>
-                {/* <p ref={ref8} className={` text-xl text-orange-500 ${Font.className} tracking-tighter`}>DigitalFortress Private Limited offers a secure and convenient passwordless authentication solution to safeguard your online accounts and prevent cyber attacks. Say goodbye to the hassle of remembering passwords and protect your digital identity with ease.</p> */}
-                <div ref={ref10} className="bg-black">
+                <p ref={ref8} className={` text-lg text-orange-500 font-light tracking-tighter`}>DigitalFortress Private Limited offers a secure and convenient passwordless authentication solution to safeguard your online accounts and prevent cyber attacks. Say goodbye to the hassle of remembering passwords and protect your digital identity with ease.</p>
+                <div ref={ref10} className="bg-black mt-10">
                 <button onClick={()=>{
                     router.push("/#contactus")
-                }} ref={ref10} className="flex z-10  justify-center items-center -translate-y-2 -translate-x-2 px-3 py-1 bg-orange-500 text-white  text-xl">Contact us!</button>
+                }} ref={ref10} className="flex z-10 -2 justify-center items-center -translate-y-2 -translate-x-2 px-3 py-1 bg-orange-500 text-white  text-xl">Contact us!</button>
                 </div>
             </div>
             <div ref={ref9} className=" h-full w-1/2 flex justify-center items-center">
             <Lottie  animationData={homeface}></Lottie>
             </div>
         </div>
-        <div id="products" className={`h-screen w-full flex flex-col justify-center items-center  snap-start snap-always ${color} `}>
+        <div id="products"  className={`h-screen w-full flex flex-col justify-center items-center  snap-start snap-always ${color} `}>
             <Title name="PRODUCTS"></Title>
             <div className="grid grid-cols-3 gap-10">
             <div className="cursor-pointer" onMouseEnter={()=>{
@@ -161,15 +152,7 @@ export default function HomePage(){
             </div>
             </div>
         </div>
-        <div id="services" className="h-screen w-full flex flex-col justify-center items-center snap-start snap-always bg-gradient-to-t from-gray-50 to-orange-200">
-            <Title name="SERVICES WE OFFER"></Title>
-            <div className="grid grid-cols-3 gap-5">
-            <ProductCard></ProductCard>
-            <ProductCard></ProductCard>
-            <ProductCard></ProductCard>
-            </div>
-        </div>
-        <div id="testimonial" className="h-screen w-full flex flex-col justify-center items-center bg-gradient-to-b from-gray-50 to-orange-200 snap-start snap-always">
+        <div id="testimonial" className="h-screen w-full flex flex-col justify-center items-center  bg-gradient-to-t from-gray-50 to-orange-200 snap-start snap-always">
             <Title name="TESTIMONIALS"></Title>
             <div className="grid grid-cols-3 gap-5">
             <ProductCard></ProductCard>
@@ -177,7 +160,7 @@ export default function HomePage(){
             <ProductCard></ProductCard>
             </div>
         </div>
-        <div id="aboutus" className="h-screen w-full flex flex-col justify-center items-center snap-start snap-always bg-gradient-to-t from-gray-50 to-orange-200">
+        <div id="aboutus" className="h-screen w-full flex flex-col justify-center items-center snap-start snap-always bg-gradient-to-b from-gray-50 to-orange-200">
         <Title name="ABOUT US"></Title>
             <div className="w-full h-2/3 flex justify-center items-center">
                 <motion.div className=" w-2/3 h-full flex justify-center items-center px-20 text-lg">
@@ -189,17 +172,10 @@ export default function HomePage(){
                 </div>
             </div>
         </div>
-        <div id="contactus" className="h-screen w-full flex flex-col justify-center items-center snap-start snap-always bg-gradient-to-b from-gray-50 to-orange-200 ">
+        <div id="contactus" className="h-screen w-full flex flex-col justify-center items-center snap-start snap-always bg-gradient-to-t from-gray-50 to-orange-200 ">
             <Title name="CONTACT US"></Title>
-            <motion.div initial={{
-                opacity:0
-            }} whileInView={{
-                opacity:1
-            }}
-            transition={{
-                delay:0.5
-            }}
-            className="w-2/3 shadow-sm h-3/5 flex bg-orange-50 rounded-lg">
+            <div
+            className="w-2/3 shadow-sm h-3/5 flex bg-orange-50 ">
             <div className="w-1/2 h-full flex justify-around items-center  flex-col">
                 <div className="w-full h-1/3  flex justify-around items-center flex-col">
                 <p className="text-2xl font-bold">Want to meet in-person?</p>
@@ -231,7 +207,7 @@ export default function HomePage(){
                 </div>
                 
         
-            </motion.div>
+            </div>
         </div>
     </div>
 }
