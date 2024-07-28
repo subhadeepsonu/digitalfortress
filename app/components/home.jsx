@@ -14,7 +14,8 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { useRouter } from "next/navigation";
-
+import ReviewCard from "./card/reviewcard";
+import { Swiper, SwiperSlide } from 'swiper/react';
 const Font = Lato({
     subsets:["latin"],
     weight:["900","400"]
@@ -94,8 +95,8 @@ export default function HomePage(){
             <Link className="" ref={ref3} href={"/#products"}>
                 Products
             </Link>
-            <Link className=" " ref={ref5} href={"/#testimonial"}>
-                Testimonials
+            <Link className=" " ref={ref5} href={"/#review"}>
+                Reviews
             </Link>
             <Link className=" " ref={ref6} href={"/#aboutus"}>
                 About
@@ -152,13 +153,18 @@ export default function HomePage(){
             </div>
             </div>
         </div>
-        <div id="testimonial" className="h-screen w-full flex flex-col justify-center items-center  bg-gradient-to-t from-gray-50 to-orange-200 snap-start snap-always">
-            <Title name="TESTIMONIALS"></Title>
-            <div className="grid grid-cols-3 gap-5">
-            <ProductCard></ProductCard>
-            <ProductCard></ProductCard>
-            <ProductCard></ProductCard>
+        <div id="review" className="h-screen w-full flex flex-col justify-evenly items-center  bg-gradient-to-t from-gray-50 to-orange-200 snap-start snap-always">
+            <div className="flex flex-col justify-center items-center">
+            <p className="text-6xl font-semibold mb-2 w-3/4 text-center " >Reviews that speaks volumes.</p>
+            <p className="tracking-wide mt-2 text-sm">Dont just take our word for it, hear what people have to say about us</p>
             </div>
+            <div className="flex">
+            <ReviewCard img={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaaFMnnp2jVk3HXJf98HdhFu8L8lCsXAGHaA&s"} star={"⭐⭐⭐⭐⭐"} name={"Subhadeep Thandaka"} productname={"Mukham"}></ReviewCard>
+            <ReviewCard img={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXHZTQs8ojYjldwZDeEM73Fk6h4BOOXGRL1A&s"} star={"⭐⭐⭐⭐"} name={"Achyut Badyal"} productname={"MauthN"}></ReviewCard>
+            <ReviewCard img={"https://t4.ftcdn.net/jpg/03/26/98/51/360_F_326985142_1aaKcEjMQW6ULp6oI9MYuv8lN9f8sFmj.jpg"} star={"⭐⭐⭐⭐⭐"} name={"Adithya Sai "} productname={"Mlsolate"}></ReviewCard>
+         
+            </div>
+    
         </div>
         <div id="aboutus" className="h-screen w-full flex flex-col justify-center items-center snap-start snap-always bg-gradient-to-b from-gray-50 to-orange-200">
         <Title name="ABOUT US"></Title>
