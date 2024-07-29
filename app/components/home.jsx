@@ -131,7 +131,7 @@ export default function HomePage(){
             <div className="grid grid-cols-3 gap-10">
             <ProductCard title="Mukham" discription="Application integrated to remind and process the flow of marking attendance with simplified UI which takes less than 10 seconds to mark attendance" img={"https://digitalfortress.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FMukhamUI.98f52f97.png&w=1080&q=75"} ></ProductCard>
             <ProductCard title="MauthN" discription="Remote authentication to provide flexibility of using any device for authentication with the security of multimodal and multifactor authentication" img={"https://digitalfortress.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmauthn-main.cbdafa5e.png&w=640&q=75"}></ProductCard>            
-            <ProductCard title="mIsolate" discription="With M-Isolate Workspaces, users gain the freedom to open any email attachment without fear of getting hacked.." img={shield.src} ></ProductCard>                        
+            <ProductCard title="mIsolate" discription="With M-Isolate Workspaces, users gain the freedom to open any email attachment without fear of getting hacked." img={shield.src} ></ProductCard>                        
             
             </div>
         </div>
