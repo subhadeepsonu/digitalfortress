@@ -7,8 +7,7 @@ import { Lato } from "next/font/google";
 import Lottie from "lottie-react";
 import homeface from "../../public/homeanimate.json"
 import ProductCard from "./card/productCard";
-import Title from "./card/title";
-import { FaArrowRight } from "react-icons/fa";
+import shield from "../../public/shield.png"
 import { IoLogoLinkedin } from "react-icons/io";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
@@ -26,7 +25,6 @@ export default function HomePage(){
     const [img,setImg]= useState("https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649")
     const [rotate,Setrotate]= useState("")
     const router = useRouter()
-    const [color,setColor] = useState("bg-gradient-to-b from-gray-50 to-orange-200")
     const ref1 = useRef(null)
     const ref2 = useRef(null)
     const ref3 = useRef(null)
@@ -125,35 +123,16 @@ export default function HomePage(){
             <Lottie className="h-2/3"  animationData={homeface}></Lottie>
             </div>
         </div>
-        <div id="products"  className={`h-screen w-full flex flex-col justify-center items-center  snap-start snap-always ${color} `}>
-            <Title name="PRODUCTS"></Title>
+        <div id="products"  className={`h-screen w-full flex flex-col justify-center items-center  snap-start snap-always bg-gradient-to-b from-gray-50 to-orange-200  `}>
+            <div className="text-center mb-10">
+            <p className="text-6xl font-semibold  text-center">Changes we Introducted to the world</p>
+            <p className="tracking-wide mt-2 text-sm">Harness the power of AI and enhance your security measures with our cutting-edge product offerings.</p>
+            </div>
             <div className="grid grid-cols-3 gap-10">
-            <div className="cursor-pointer" onMouseEnter={()=>{
-                setColor("bg-gradient-to-b from-gray-50 to-rose-200")
-            }}
-            onMouseLeave={()=>{
-                setColor("bg-gradient-to-b from-gray-50 to-orange-200")
-            }}
-            >
-            <ProductCard bg="bg-red-200" name="Mukham" one="AI-based Attendance System" two="Geo Fencing" three="Data Management" four="3D Maps"></ProductCard>
-            </div>
-            <div className="cursor-pointer" onMouseEnter={()=>{
-                setColor("bg-gradient-to-b from-gray-50 to-green-200")
-            }}
-            onMouseLeave={()=>{
-                setColor("bg-gradient-to-b from-gray-50 to-orange-200")
-            }}
-            >
-            <ProductCard bg="bg-green-200" name="MauthN" one="Flexible device usage for authentication." two="Enhanced security with multimodal and multifactor options." three="Platform-independent advanced multifactor authentication." four="Multiple passwordless authentication factors available for users."></ProductCard>
-            </div>
-            <div className="cursor-pointer" onMouseEnter={()=>{
-                setColor("bg-gradient-to-b from-gray-50 to-blue-200")
-            }}
-            onMouseLeave={()=>{
-                setColor("bg-gradient-to-b from-gray-50 to-orange-200")
-            }}>
-            <ProductCard bg="bg-blue-200" name="mIsolate" one="Agentless Security" two="Flexible and Customizable" three="Open-Source Foundations" four="Complete Endpoint Protection"></ProductCard>
-            </div>
+            <ProductCard title="Mukham" discription="Application integrated to remind and process the flow of marking attendance with simplified UI which takes less than 10 seconds to mark attendance" img={"https://digitalfortress.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FMukhamUI.98f52f97.png&w=1080&q=75"} ></ProductCard>
+            <ProductCard title="MauthN" discription="Remote authentication to provide flexibility of using any device for authentication with the security of multimodal and multifactor authentication" img={"https://digitalfortress.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmauthn-main.cbdafa5e.png&w=640&q=75"}></ProductCard>            
+            <ProductCard title="mIsolate" discription="With M-Isolate Workspaces, users gain the freedom to open any email attachment without fear of getting hacked.." img={shield.src} ></ProductCard>                        
+            
             </div>
         </div>
         <div id="review" className="h-screen w-full flex flex-col justify-evenly items-center  bg-gradient-to-t from-gray-50 to-orange-200 snap-start snap-always">
