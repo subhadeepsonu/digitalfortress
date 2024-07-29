@@ -124,8 +124,8 @@ export default function HomePage(){
             </div>
         </div>
         <div id="products"  className={`h-screen w-full flex flex-col justify-center items-center  snap-start snap-always bg-gradient-to-b from-gray-50 to-orange-200  `}>
-            <div className="text-center mb-10">
-            <p className="text-6xl font-semibold  text-center">Changes we Introducted to the world</p>
+            <div className="text-center mb-10 flex justify-center items-center flex-col">
+            <p className="text-6xl font-semibold w-3/4  text-center">Changes we Introducted to the world</p>
             <p className="tracking-wide mt-2 text-sm">Harness the power of AI and enhance your security measures with our cutting-edge product offerings.</p>
             </div>
             <div className="grid grid-cols-3 gap-10">
